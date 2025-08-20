@@ -1,4 +1,10 @@
 import streamlit as st
 
-st.title("Title 입니다.")
-st.write("처음 입니다.")
+page_main = st.Page("main.py", title="Main Page")
+page_1 = st.Page("p1.py", title="Page 1")
+page_2 = st.Page("p2.py", title="Page 2")
+page_3 = st.Page("p3.py", title="Page 3")
+
+page = st.navigation([page_main,page_1,page_2,page_3])
+
+page.run()
